@@ -1,5 +1,5 @@
 # nixos/desktop.nix
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   # You can import other NixOS modules here
   imports = [
@@ -21,6 +21,9 @@
 
     ./../firefox.nix
   ];
+
+  # Use latest kernel.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # boot.loader.efi.canTouchEfiVariables = false;
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
