@@ -67,8 +67,10 @@
     networkmanager.enable = true;
   };
 
+  hardware.bluetooth.enable = true;
+
   # Set your time zone.
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = "US/Pacific";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
