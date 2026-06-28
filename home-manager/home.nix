@@ -168,24 +168,25 @@
 
   programs.git = {
     enable = true;
-    userEmail = "herecomesthemoon@protonmail.com";
-    userName = "Mond";
-    extraConfig = {
+    settings = {
+      user.email = "herecomesthemoon@protonmail.com";
+      user.name = "Mond";
       init.defaultBranch = "main";
+      aliases = {
+        a = "add";
+        aa = "add -A";
+        c = "commit -v";
+        ca = "commit --amend -v";
+        d = "diff";
+        p = "push";
+        s = "status -s";
+        lg = "log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'";
+      };
     };
-    delta = {
-      enable = true;
-    };
-    aliases = {
-      a = "add";
-      aa = "add -A";
-      c = "commit -v";
-      ca = "commit --amend -v";
-      d = "diff";
-      p = "push";
-      s = "status -s";
-      lg = "log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'";
-    };
+  };
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 
   programs.kitty = {

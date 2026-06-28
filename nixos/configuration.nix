@@ -127,6 +127,8 @@
     #media-session.enable = true;
   };
 
+  services.tailscale.enable = true;
+
   users.users = {
     mond = {
       description = "Mond";
@@ -141,7 +143,7 @@
       shell = pkgs.fish;
       packages = with pkgs; [
         hugo # static site generator
-        nodePackages.prettier
+        prettier
         # python312Packages.python-lsp-server
         # black
         pinta
