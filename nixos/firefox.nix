@@ -89,9 +89,6 @@ in
             Value = 3;
             Status = "locked";
           };
-          "network.trr.uri" = "https://mozilla.cloudflare-dns.com/dns-query";
-          "network.trr.mode" = 2; # 2 = Try DoH, fallback to native system DNS
-          "network.trr.excluded-domains" = "buds.zone,tail4e19fc.ts.net";
         };
       };
     };
